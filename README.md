@@ -179,7 +179,7 @@ gateway 192.168.1.1
 
 ## Soal 2 
 
-Pada router, kita install DHCP relay dengan command ''apt-get install isc-dhcp-relay''. Lalu kita buka ''/etc/default/isc-dhcp-relay" dan mengedit konfigurasi seperti berikut.
+Pada router, kita install DHCP relay dengan command "apt-get install isc-dhcp-relay". Lalu kita buka ''/etc/default/isc-dhcp-relay" dan mengedit konfigurasi seperti berikut.
 
 
 

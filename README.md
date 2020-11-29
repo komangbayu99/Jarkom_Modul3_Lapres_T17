@@ -169,9 +169,9 @@ gateway 192.168.1.1
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782303302128893962/modul3_1.jpg)
 
-- Lalu pada bye.sh juga disetting dan menambahkan UML yang baru.
+- Lalu pada ``bye.sh`` juga disetting dan menambahkan UML yang baru.
 
-- Untuk Router SURABAYA disetting dulu net.ipv4.ip_forward pada ``/etc/sysctl.conf`` lalu diaktifkan dengan command sysctl -p 
+- Untuk Router SURABAYA disetting dulu ``net.ipv4.ip_forward`` pada ``/etc/sysctl.conf`` lalu diaktifkan dengan command ``sysctl -p`` 
 
 - Masing-masing UML akan disetting network interfacenya.
 
@@ -183,15 +183,15 @@ gateway 192.168.1.1
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782376845558677514/modul3_2.jpg)
 
--SERVERS= Kita isi dengan alamat IP DHCP server (TUBAN), dan INTERFACES= diisi dengan eth1 eth2 eth3, karena pada DHCP relay (SURABAYA) akan meneruskan DHCP request dari network interface eth1 dan eth2, lalu meneruskannya ke DHCP server melalui eth3. Setelah itu service dapat direstart dengan command service isc-dhcp-relay restart
+-SERVERS= Kita isi dengan alamat IP DHCP server (TUBAN), dan INTERFACES= diisi dengan ``eth1 eth2 eth3``, karena pada DHCP relay (SURABAYA) akan meneruskan DHCP request dari network interface eth1 dan eth2, lalu meneruskannya ke DHCP server melalui eth3. Setelah itu service dapat direstart dengan command ``service isc-dhcp-relay restart``
 
 ## Soal 3
 
-- Pertama download DHCP server menggunakan command apt-get install isc-dhcp-server. lalu setting INTERFACES yang digunakan oleh TUBAN pada file /etc/default/isc-dhcp-server
+- Pertama download DHCP server menggunakan command ``apt-get install isc-dhcp-server``. lalu setting INTERFACES yang digunakan oleh TUBAN pada file ``/etc/default/isc-dhcp-server``
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782376989746266182/modul3_3a.jpg)
 
-- Agar DHCP Server dapat berjalan dengan lancar, perlu deklarasi subnet yang terkoneksi pada TUBAN (subnet dari eth0 TUBAN) pada /etc/dhcp/dhcpd.conf. Untuk subnet 2 ini hanya harus dideklarasikan, tetapi tidak harus memiliki settingan dhcp.
+- Agar DHCP Server dapat berjalan dengan lancar, perlu deklarasi subnet yang terkoneksi pada TUBAN (subnet dari eth0 TUBAN) pada ``/etc/dhcp/dhcpd.conf``. Untuk subnet 2 ini hanya harus dideklarasikan, tetapi tidak harus memiliki settingan dhcp.
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782377137172250634/modul3_3b.jpg)
 
@@ -209,7 +209,7 @@ gateway 192.168.1.1
 
 ## Soal 5
 
-- Untuk settingan DNS harus menggunakan , antar DNS tidak seperti range.
+- Untuk settingan DNS harus menggunakan , antar DNS tidak seperti ``range``.
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782377272409587743/modul3_3c_dan_4a.jpg)
 
@@ -223,9 +223,9 @@ Untuk soal ini ``default-lease-time`` diedit dengan satuan detik.
 
 ## Soal 7
 
-- Pertama kita download dulu squid dengan command apt-get install squid dan juga apache2-utils dengan command apt-get install apache2-utils. Lalu dibuat konfigurasi username dan password dengan command htpasswd -c /etc/squid/passwd userta_t03. Lalu nanti akan diminta password dan diinputkan dengan inipassw0rdta_t03.
+- Pertama kita download dulu squid dengan command ``apt-get install squid`` dan juga ``apache2-utils`` dengan command ``apt-get install apache2-utils``. Lalu dibuat konfigurasi username dan password dengan command ``htpasswd -c /etc/squid/passwd userta_t17``. Lalu nanti akan diminta password dan diinputkan dengan ``inipassw0rdta_t7``.
 
-- Selanjutnya kita setting /etc/squid/squid.conf agar memiliki konfigurasi sebagai berikut : 
+- Selanjutnya kita setting ``/etc/squid/squid.conf`` agar memiliki konfigurasi sebagai berikut : 
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782378657582153798/modul_3_7.jpg)
 
@@ -233,17 +233,17 @@ Ketika kita mencoba koneksi proxy, maka akan muncul prompt untuk login.
 
 ## Soal 8
 
-- Pertama kita edit /etc/squid/acl.conf agar menjadi sebagai berikut.
+- Pertama kita edit ``/etc/squid/acl.conf`` agar menjadi sebagai berikut.
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782379558866386945/modul3_8_9.jpg)
 
-- Lalu pada /etc/squid/squid.conf, konfigurasi diedit menjadi berikut.
+- Lalu pada ``/etc/squid/squid.conf``, konfigurasi diedit menjadi berikut.
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782378657582153798/modul_3_7.jpg)
 
 ## Soal 9 
 
-- Sama seperti soal berikutnya, file /etc/squid/acl.conf hanya perlu diedit menjadi seperti berikut 
+- Sama seperti soal berikutnya, file ``/etc/squid/acl.conf`` hanya perlu diedit menjadi seperti berikut 
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782379558866386945/modul3_8_9.jpg)
 

@@ -183,7 +183,11 @@ gateway 192.168.1.1
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782376845558677514/modul3_2.jpg)
 
--SERVERS= Kita isi dengan alamat IP DHCP server (TUBAN), dan INTERFACES= diisi dengan ``eth1 eth2 eth3``, karena pada DHCP relay (SURABAYA) akan meneruskan DHCP request dari network interface eth1 dan eth2, lalu meneruskannya ke DHCP server melalui eth3. Setelah itu service dapat direstart dengan command ``service isc-dhcp-relay restart``
+- Dibagian ``SERVERS`` Kita isi dengan alamat IP DHCP server (TUBAN), 
+
+- Dibagian ``INTERFACES`` diisi dengan ``eth1 eth2 eth3``, 
+
+- Setelah itu service dapat direstart dengan command ``service isc-dhcp-relay restart``
 
 ## Soal 3
 

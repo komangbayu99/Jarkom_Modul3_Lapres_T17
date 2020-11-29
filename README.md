@@ -165,13 +165,13 @@ gateway 192.168.1.1
 
 ## Soal 1
 
-- Pertama kita setting topologi.sh pada virtual machine agar menambahkan beberapa UML baru dan mengatur seluruh network interface agar sesuai dengan gambar topologi seperti berikut : 
+- Pertama kita setting topologi.sh pada virtual machine agar menambahkan beberapa UML baru dan mengatur seluruh network interface agar sesuai dengan gambar topologi.
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782303302128893962/modul3_1.jpg)
 
 - Lalu pada ``bye.sh`` juga disetting dan menambahkan UML yang baru.
 
-- Untuk Router SURABAYA disetting dulu ``net.ipv4.ip_forward`` pada ``/etc/sysctl.conf`` lalu diaktifkan dengan command ``sysctl -p`` 
+- Setelah itu setting router SURABAYA dengan  ``net.ipv4.ip_forward`` pada ``/etc/sysctl.conf`` lalu diaktifkan dengan command ``sysctl -p`` 
 
 - Masing-masing UML akan disetting network interfacenya.
 
@@ -187,11 +187,15 @@ gateway 192.168.1.1
 
 ## Soal 3
 
-- Pertama download DHCP server menggunakan command ``apt-get install isc-dhcp-server``. lalu setting INTERFACES yang digunakan oleh TUBAN pada file ``/etc/default/isc-dhcp-server``
+- Pertama download DHCP server menggunakan command ``apt-get install isc-dhcp-server``. 
+
+- setelah itu setting INTERFACES yang digunakan oleh TUBAN pada file ``/etc/default/isc-dhcp-server``
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782376989746266182/modul3_3a.jpg)
 
-- Agar DHCP Server dapat berjalan dengan lancar, perlu deklarasi subnet yang terkoneksi pada TUBAN (subnet dari eth0 TUBAN) pada ``/etc/dhcp/dhcpd.conf``. Untuk subnet 2 ini hanya harus dideklarasikan, tetapi tidak harus memiliki settingan dhcp.
+- Agar DHCP Server dapat berjalan dengan lancar, perlu deklarasi subnet yang terkoneksi pada TUBAN (subnet dari eth0 TUBAN) pada ``/etc/dhcp/dhcpd.conf``. 
+
+- Untuk subnet 2 ini hanya harus dideklarasikan, tetapi tidak harus memiliki settingan dhcp.
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782377137172250634/modul3_3b.jpg)
 
@@ -203,7 +207,7 @@ gateway 192.168.1.1
 
 ## Soal 4
 
-- Sama dengan soal sebelumnya, settingan subnet 3 sebagai berikut.
+- Cara menyelesaikan persoalan ini adalah dengan mensetting subnet 3 sebagai berikut.
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782377272409587743/modul3_3c_dan_4a.jpg)
 
@@ -217,13 +221,17 @@ gateway 192.168.1.1
 
 ## Soal 6
 
-Untuk soal ini ``default-lease-time`` diedit dengan satuan detik.
+Yang harus dilakukan di dalam soal ini adalah, command ``default-lease-time`` diedit dengan satuan detik.
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782377272409587743/modul3_3c_dan_4a.jpg)
 
 ## Soal 7
 
-- Pertama kita download dulu squid dengan command ``apt-get install squid`` dan juga ``apache2-utils`` dengan command ``apt-get install apache2-utils``. Lalu dibuat konfigurasi username dan password dengan command ``htpasswd -c /etc/squid/passwd userta_t17``. Lalu nanti akan diminta password dan diinputkan dengan ``inipassw0rdta_t17``.
+- Pertama kita download dulu squid dengan command ``apt-get install squid`` dan juga ``apache2-utils`` dengan command ``apt-get install apache2-utils``. 
+
+- Selanjutnya buat konfigurasi username dan password dengan command ``htpasswd -c /etc/squid/passwd userta_t17``. 
+
+- Setalah itu kita nanti akan diminta password dan diinputkan dengan ``inipassw0rdta_t17``.
 
 - Selanjutnya kita setting ``/etc/squid/squid.conf`` agar memiliki konfigurasi sebagai berikut : 
 
@@ -233,20 +241,23 @@ Ketika kita mencoba koneksi proxy, maka akan muncul prompt untuk login.
 
 ## Soal 8
 
-- Pertama kita edit ``/etc/squid/acl.conf`` agar menjadi sebagai berikut.
+- Mula-Mula kita edit ``/etc/squid/acl.conf`` agar menjadi sebagai berikut.
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782379558866386945/modul3_8_9.jpg)
 
-- Lalu pada ``/etc/squid/squid.conf``, konfigurasi diedit menjadi berikut.
+- Jaawaban yang ``acl WAKTU time TW 13:00-18:00``
+
+- Setelah itu ``/etc/squid/squid.conf``, konfigurasi diedit menjadi berikut.
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782378657582153798/modul_3_7.jpg)
 
 ## Soal 9 
 
-- Sama seperti soal berikutnya, file ``/etc/squid/acl.conf`` hanya perlu diedit menjadi seperti berikut 
+- Step awal adalah file ``/etc/squid/acl.conf`` hanya perlu diedit menjadi seperti berikut :
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782379558866386945/modul3_8_9.jpg)
 
+- Jawaban yang ``acl WAKTU time TWH 21:00-23:59`` dan ``acl WAKTU time WHF 00:00-09:00``
 
 
 ## Soal 10

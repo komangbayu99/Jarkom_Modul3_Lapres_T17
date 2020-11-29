@@ -247,6 +247,8 @@ Ketika kita mencoba koneksi proxy, maka akan muncul prompt untuk login.
 
 ![picture](https://cdn.discordapp.com/attachments/691272824765284362/782379558866386945/modul3_8_9.jpg)
 
+
+
 ## Soal 10
 
 Set supaya bisa redirect seperti gambar berikut (google -> monta)

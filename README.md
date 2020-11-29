@@ -223,7 +223,7 @@ Untuk soal ini ``default-lease-time`` diedit dengan satuan detik.
 
 ## Soal 7
 
-- Pertama kita download dulu squid dengan command ``apt-get install squid`` dan juga ``apache2-utils`` dengan command ``apt-get install apache2-utils``. Lalu dibuat konfigurasi username dan password dengan command ``htpasswd -c /etc/squid/passwd userta_t17``. Lalu nanti akan diminta password dan diinputkan dengan ``inipassw0rdta_t7``.
+- Pertama kita download dulu squid dengan command ``apt-get install squid`` dan juga ``apache2-utils`` dengan command ``apt-get install apache2-utils``. Lalu dibuat konfigurasi username dan password dengan command ``htpasswd -c /etc/squid/passwd userta_t17``. Lalu nanti akan diminta password dan diinputkan dengan ``inipassw0rdta_t17``.
 
 - Selanjutnya kita setting ``/etc/squid/squid.conf`` agar memiliki konfigurasi sebagai berikut : 
 
